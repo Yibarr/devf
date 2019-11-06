@@ -11,7 +11,7 @@ const request = require('request');
 //     }
 // });
 
-// const URL_BASE = "https://pokeapi.co/api/v2";
+const URL_BASE = "https://pokeapi.co/api/v2";
 
 
 // const getPokemonById = (name,selection) => {
@@ -90,30 +90,70 @@ const api_key = 'p4p5UQ1zHzL9hKj66cdYK62T8aszYPiNmba8cMBQ';
 // [[{},{},{}],[{},{},{}],[{},{},{}]]
 
 
-near_earth_objects = {
-    '2019...':[],
-    '2019...':[],
-    '2019...':[],
-    '2019...':[],
-};
+// near_earth_objects = {
+//     '2019...':[],
+//     '2019...':[],
+//     '2019...':[],
+//     '2019...':[],
+// };
 
 
-request.get(`${NASA_URL}${api_key}`,(error,response,body)=>{
-    if(response.statusCode !== 200) return response.statusCode;
+// request.get(`${NASA_URL}${api_key}`,(error,response,body)=>{
+//     if(response.statusCode !== 200) return response.statusCode;
 
-    const json = JSON.parse(body);
+//     const json = JSON.parse(body);
 
-    const array = Object.values(json.near_earth_objects);
+//     const array = Object.values(json.near_earth_objects);
 
-    array.forEach(date =>
-         date.forEach(asteroid => 
-            asteroid.is_potentially_hazardous_asteroid 
-            ? console.log(asteroid.id,asteroid.is_potentially_hazardous_asteroid )
-            :""
-        )
-    )
+//     array.forEach(date =>
+//          date.forEach(asteroid => 
+//             asteroid.is_potentially_hazardous_asteroid 
+//             ? console.log(asteroid.id,asteroid.is_potentially_hazardous_asteroid )
+//             :""
+//         )
+//     )
 
-    // console.log()
+//     // console.log()
 
 
-})
+// })
+
+
+// const getPokeById = (id) => {
+//     let pokemon_1 = "Sin pokemon"
+
+    
+    // request.get(`${URL_BASE}/pokemon/${id}`,(error,response,body)=>{
+    //     const json = JSON.parse(body);
+    //     pokemon_1 = json.name;
+        // console.log(pokemon_1);
+        // console.log(2)
+    // })
+//     // console.log(1)
+//     return pokemon_1
+// }
+
+
+// console.log(getPokeById(150))
+
+
+// const pokePromesa = new Promise((resolve,reject)=>{
+//     const statusCode = 200;
+//     if(statusCode !== 200){
+//         reject('Desde el  reject');
+//     }else{
+//         resolve('Desde el resolve');
+//     }
+// })
+
+// pokePromesa
+// .then( parametro => console.log(parametro))
+// .catch(parametro => console.log(parametro));
+
+// for (let i = 0; i < 999999999; i++){
+//     console.log(i)
+// };
+
+// request.get('http://localhost:4532/',(error,response, body) => {
+//     console.log(JSON.parse(body))
+// });
