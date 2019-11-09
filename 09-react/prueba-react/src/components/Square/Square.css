@@ -1,0 +1,19 @@
+.square{
+    height: 200px;
+    width:200px;
+    border:solid;
+    margin: 3px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    height: 50px;
+    width: 100px;
+    /* font-size: 1rem; */
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: beige;
+}
